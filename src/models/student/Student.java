@@ -1,6 +1,4 @@
-package models;
-
-import java.sql.Array;
+package models.student;
 
 public class Student {
     private int StudentId;

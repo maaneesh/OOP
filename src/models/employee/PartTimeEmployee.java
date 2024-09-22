@@ -1,4 +1,4 @@
-package models;
+package models.employee;
 
 public class PartTimeEmployee extends Employee {
     public PartTimeEmployee(double salary, double basic, double allowance, double deductions) {

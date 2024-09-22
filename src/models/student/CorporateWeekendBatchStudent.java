@@ -1,4 +1,4 @@
-package models;
+package models.student;
 
 public class CorporateWeekendBatchStudent extends Student {
 

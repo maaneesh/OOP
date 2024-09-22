@@ -1,8 +1,8 @@
-package models;
+package models.employee;
 
 public class Employee {
     private static int counter = 0;
-    private int emplId;
+    private  int emplId;
     private double salary = 0;
     private double basic;
     private double allowance;
@@ -20,13 +20,19 @@ public class Employee {
         this.pinCode = "";
     }
 
-    public Employee(String firstName, String lastName, String address, String pinCode) {
+    public Employee(String firstName, String lastName, String address, String pinCode, double salary, double basic, double allowance, double deductions ) {
         this.emplId = ++counter;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.pinCode = pinCode;
+        this.salary = salary;
+        this.basic = basic;
+        this.allowance = allowance;
+        this.deductions = deductions;
+
     }
+
     public Employee(double salary, double basic, double allowance, double deductions) {
         this.emplId = ++counter;
         this.salary = salary;
@@ -107,26 +113,6 @@ public class Employee {
 
 
     public static void main(String[] args) {
-        Employee employee1 = new Employee(1000,800 ,250,300);
-        employee1.setRealName("Manish", "Chaudhari");
-        employee1.setAddress("Queens");
-
-        Employee employee2 = new PartTimeEmployee(1000,800 ,250,300);
-        employee2.setRealName("Manish", "Tharu");
-        employee2.setAddress("Woodside");
-
-        Employee nightEmployee = new NightShiftEmployees(1000,800 ,250,300);
-
-        System.out.println(employee1+"\nSalary: "+employee1.calcSalary());
-        System.out.println(employee2+"\nSalary: "+employee2.calcSalary());
-        System.out.println(nightEmployee+"\nSalary: "+nightEmployee.calcSalary());
-
-       Manager manager1 = new Manager(4500,400,50,450);
-        manager1.setBasic(1000);
-        manager1.setAllowance(100);
-        manager1.setDeductions(100);
-        System.out.println(manager1+"\nSalary: "+manager1.calcSalary());
-
 
     }
 

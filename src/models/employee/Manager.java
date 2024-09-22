@@ -1,4 +1,4 @@
-package models;
+package models.employee;
 
 public class Manager extends FulTimeEmployee{
     public Manager(String firstName, String lastName, String address, String pincode) {
