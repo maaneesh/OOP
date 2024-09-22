@@ -37,7 +37,6 @@ public class Student {
         if (validateMobileNo(mobileNo)) {
             this.mobileNo = mobileNo;
 
-
         }
     }
 

@@ -3,7 +3,7 @@ package models;
 public class Employee {
     private static int counter = 0;
     private int emplId;
-    private double salary=0;
+    private double salary = 0;
     private double basic;
     private double allowance;
     private double deductions;
@@ -68,15 +68,9 @@ public class Employee {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+
+    public void setRealName(String firstName, String lastName) {
         this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
@@ -94,6 +88,10 @@ public class Employee {
 
     public void setPinCode(String pinCode) {
         this.pinCode = pinCode;
+    }
+
+    public double calcSalary() {
+        return (double) ((float) basic + allowance - deductions);
     }
 
 
